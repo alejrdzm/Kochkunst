@@ -13539,18 +13539,6 @@ h3 {
   }
 }
 
-.box-text {
-  font-family: "Poppins";
-  font-weight: 400;
-  font-size: 1rem;
-  color: hsl(205deg, 10%, 51%);
-}
-@media only screen and (max-width: 480px) {
-  .box-text {
-    width: 100%;
-  }
-}
-
 .likes-text {
   font-family: "Poppins";
   font-weight: 400;
@@ -13559,6 +13547,18 @@ h3 {
 }
 @media only screen and (max-width: 480px) {
   .likes-text {
+    width: 100%;
+  }
+}
+
+.box-text {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 1rem;
+  color: hsl(205deg, 10%, 51%);
+}
+@media only screen and (max-width: 480px) {
+  .box-text {
     width: 100%;
   }
 }
