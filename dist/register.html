@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="./css/main.css">
-    <title>Kochkunst | Register</title>
-  </head>
-  <body>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Kochkunst | Register</title>
+</head>
+
+<body>
   <section id="app" class="container">
     <!-- Header -->
     <header class="position-relative">
-        <img v-bind:src= "logo" class="mx-auto d-block mt-2 mb-2" alt="logo">
-        <div class="position-absolute top-50 start-50 translate-middle">
-        </div>
+      <img v-bind:src="logo" class="mx-auto d-block mt-2 mb-2" alt="logo">
+      <div class="position-absolute top-50 start-50 translate-middle">
+      </div>
     </header>
     <!-- Menu -->
     <nav class="navbar navbar-expand-lg rounded-5 navbar-dark bg-dark">
       <div class="container-fluid">
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="profile.html">Profile</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="login.html">Log In</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="register.html">Register</a>
-                  </li>
-              </ul>
-          </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="register.html">Register</a>
+            </li>
+          </ul>
+        </div>
       </div>
-  </nav>
-  <!-- Form -->
+    </nav>
+    <!-- Form -->
     <div class="container-fluid">
       <div class="row justify-content-center mt-5">
         <div class="col-md-4">
           <div class="card bg-dark">
             <div class="card-body">
               <h3 class="card-title title-text text-center mb-4">Register</h4>
-              <form>
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-light btn-block mt-4">Join</button>
-              </form>
+                <form>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                      placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-light btn-block mt-4">Join</button>
+                </form>
             </div>
           </div>
         </div>
@@ -67,18 +70,21 @@
   </section>
   <!-- footer -->
   <footer class="row footer bg-dark mt-5">
-        <p class="text-center text-light footer-text mt-3">Kochkunst and its logo are registered trademark.</p>
-        <p class="text-center text-light footer-text">© 2023 Kochkunst.</p>
+    <p class="text-center text-light footer-text mt-3">Kochkunst and its logo are registered trademark.</p>
+    <p class="text-center text-light footer-text">© 2023 Kochkunst.</p>
   </footer>
   <!-- BS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
   <!-- VueJS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <!-- Main JS -->
-    <script src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
   <!-- Mounted app -->
-    <script>
-      const mountedApp = app.mount("#app");
-    </script>
-  </body>
+  <script>
+    const mountedApp = app.mount("#app");
+  </script>
+</body>
+
 </html>
