@@ -60,38 +60,44 @@
     </header>
     <!-- Menu -->
     <nav class="navbar navbar-expand-lg rounded-5 navbar-dark bg-dark">
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
-          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-        </ul>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">KOCHKUNST</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+            <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- Categories -->
-    <section class="row">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse">
-            <ul class="nav nav-pills me-auto mb-2 mt-3 mb-lg-0">
-              <li v-for="(category, index) in categories" class="nav-item me-3">
-                <button class="btn rounded-5 btn-dark" v-on:click="onClickCategory(category.name)"
-                  aria-current="page">{{ category.name }}</button>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control rounded-5 me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-dark rounded-5" type="submit">Search</button>
-            </form>
-          </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li v-for="(category, index) in categories" class="nav-item me-3">
+              <button class="btn rounded-5 btn-dark" v-on:click="onClickCategory(category.name)"
+                aria-current="page">{{ category.name }}</button>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control rounded-5 me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark rounded-5" type="submit">Search</button>
+          </form>
         </div>
-      </nav>
-    </section>
+      </div>
+    </nav>
+    
     <!-- Featured Recipes -->
     <section class="row mt-5 mb-3">
       <h2 class="mb-3">Top 10 Recipes</h2>
