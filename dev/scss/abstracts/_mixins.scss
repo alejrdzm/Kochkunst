@@ -1,5 +1,4 @@
 @use '../abstracts/variables';
-@use '../base/media-queries';
 
 @mixin set-font($ffamily, $fweight, $fsize, $fcolor){
     font-family: $ffamily;

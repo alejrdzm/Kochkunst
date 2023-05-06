@@ -42,14 +42,14 @@
           </div>
       </nav>
       <!-- Profile -->
-      <div v-for="(users, index) in users" class="container mt-5">
+      <div class="container mt-5">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 mb-3">
               <div class="card bg-dark">
-                <img class="card-img-top p-2" v-bind:src="users.image" alt="profile">
+                <img class="card-img-top p-2" v-bind:src="users[selectedIndex].image" alt="profile">
                 <div class="card-body">
-                  <h5 class="card-title text-light">{{ users.name }}</h5>
-                  <p class="card-text text-light">{{ users.info }}</p>
+                  <h5 class="card-title text-light">{{ users[selectedIndex].name }}</h5>
+                  <p class="card-text text-light">{{ users[selectedIndex].info }}</p>
                 </div>
               </div>
             </div>

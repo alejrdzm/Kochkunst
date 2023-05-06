@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <title>Kochkunst | Home</title>
 </head>
 <body>
@@ -50,30 +51,23 @@
         </header>
         <!-- Menu -->
         <nav class="navbar navbar-expand-lg rounded-5 navbar-dark bg-dark">
-          <div class="container-fluid">
-              <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                  <ul class="navbar-nav">
-                      <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="profile.html">Profile</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="login.html">Log In</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="register.html">Register</a>
-                      </li>
-                  </ul>
-              </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+                <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+            </ul>
           </div>
-      </nav>
+          </nav>
         <!-- Categories -->
         <section class="row">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-              
                 <div class="collapse navbar-collapse">
                   <ul class="nav nav-pills me-auto mb-2 mt-3 mb-lg-0">
                       <li v-for="(category, index) in categories" class="nav-item me-3">
