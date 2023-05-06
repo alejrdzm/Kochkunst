@@ -1,0 +1,8 @@
+@use './vendor/bootstrap/bootstrap.scss';
+@use './abstracts/variables';
+@use './abstracts/mixins';
+@use './base/typography';
+
+body{
+    font-family: variables.$ff-primary;
+}
