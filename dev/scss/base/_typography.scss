@@ -85,3 +85,11 @@ h3{
         width: 100%;
     }
 }
+
+.title-text{
+    @include mixins.set-font(variables.$ff-primary, variables.$fw-regular, variables.$fs-sm, variables.$clr-white);
+
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+    }
+}
