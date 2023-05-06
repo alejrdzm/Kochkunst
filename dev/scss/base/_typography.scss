@@ -93,3 +93,11 @@ h3{
         width: 100%;
     }
 }
+
+.admin-text{
+    @include mixins.set-font(variables.$ff-primary, variables.$fw-semibold, variables.$fs-xxsm, variables.$clr-dark);
+    
+    @include media-queries.respond-to(media-queries.$phone){
+        width: 100%;
+    }
+}

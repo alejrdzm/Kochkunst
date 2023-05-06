@@ -40,8 +40,14 @@ const app = Vue.createApp({
                 {id: 11, image:'./images/recipes/erbsensuppe.png', likes: '110', name: 'Erbsensuppe', category: 'Soups', prep_time: '15 minutes', cook_time: '1 hour', total_time: '1 hour 15 minutes', portions: 6, complexity: 'Easy', occasion: 'Birthday', description: 'A traditional pea soup made with ham hock, carrots, and potatoes.', ingredients: ['dried peas', 'ham hock', 'carrots', 'potatoes', 'onion', 'bay leaves', 'salt', 'pepper'], instructions: 'Soak the peas overnight. Drain and rinse the peas. Add the peas, ham hock, chopped vegetables, bay leaves, salt, and pepper to a pot. Cover with water and bring to a boil. Reduce heat and simmer until the peas are tender and the ham falls off the bone. Remove the ham and bay leaves. Blend the soup until smooth. Cut the ham into pieces and add it back to the soup.', recipes_related: ['Kartoffelsuppe', 'Gulaschsuppe']},
                 {id: 01, image:'./images/recipes/bienenstich.png', likes: '120', name: 'Bienenstich', category: 'Breakfast', prep_time: '30 min', cook_time: '25 min', total_time: '55 min', portions: 12, complexity: 'intermediate', occasion: 'Dad Day', description: 'Bienenstich, or "bee sting" cake, is a traditional German pastry that consists of a yeast dough, a vanilla custard filling, and a caramelized almond topping.', ingredients: ['flour', 'sugar', 'butter', 'milk', 'yeast', 'eggs', 'vanilla extract', 'cornstarch', 'almonds', 'honey'], instructions: ['Make the yeast dough', 'Make the custard filling', 'Caramelize the almonds', 'Assemble the cake', 'Bake the cake'], recipes_related: ['Müsli']},
             ],
-            profileInfo:[
-                {name: 'John Doe', image:'./images/profile/placeholder.jpg', info: 'jdoe@email.com', saved: 3}
+            users:[
+                {name: 'John Doe', image:'./images/profile/placeholder.jpg', info: 'jdoe@email.com'},
+                {name: 'Jane Doe', image:'./images/profile/placeholder.jpg', info: 'janedoe@email.com'}
+            ],
+            revision:[
+                {name: 'Arequipe', status: 'Pending'},
+                {name: 'Bratwurst', status: 'Pending'},
+                {name: 'Rouladen', status: 'Pending'}
             ]
         }
     },

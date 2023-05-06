@@ -32,7 +32,7 @@
                           <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link" href="log-in.html">Log In</a>
+                          <a class="nav-link" href="login.html">Log In</a>
                       </li>
                       <li class="nav-item">
                           <a class="nav-link" href="register.html">Register</a>
@@ -42,21 +42,21 @@
           </div>
       </nav>
       <!-- Profile -->
-      <div v-for="(profileInfo, index) in profileInfo" class="container mt-5">
+      <div v-for="(users, index) in users" class="container mt-5">
           <div class="row">
             <div class="col-md-4">
-              <div class="card">
-                <img class="card-img-top rounded" v-bind:src="profileInfo.image" alt="profile">
+              <div class="card bg-dark">
+                <img class="card-img-top p-2" v-bind:src="users.image" alt="profile">
                 <div class="card-body">
-                  <h5 class="card-title">{{ profileInfo.name }}</h5>
-                  <p class="card-text">{{ profileInfo.info }}</p>
+                  <h5 class="card-title text-light">{{ users.name }}</h5>
+                  <p class="card-text text-light">{{ users.info }}</p>
                 </div>
               </div>
             </div>
             <div class="col-md-8">
-              <div class="card">
+              <div class="card bg-dark">
                 <div class="card-body">
-                  <h2 class="card-title">Recipes Saved</h5>
+                  <h2 class="card-title title-text">Recipes Saved</h2>
                     <section class="row">
                       <div v-if="hasRecipes" v-for="(featuredRecipes, index) in featuredRecipes" class="col-md-3 p-2">
                         <div class="card p-2">

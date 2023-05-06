@@ -13522,6 +13522,18 @@ h3 {
   }
 }
 
+.admin-text {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.375rem;
+  color: hsl(200deg, 19%, 18%);
+}
+@media only screen and (max-width: 480px) {
+  .admin-text {
+    width: 100%;
+  }
+}
+
 body {
   font-family: "Poppins";
 }

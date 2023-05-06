@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Kochkunst | Log In</title>
+  </head>
+  <body>
+    <section id="app" class="container">
+        <!-- Header -->
+        <header class="position-relative">
+            <img v-bind:src= "logo" class="mx-auto d-block mt-2 mb-2" alt="logo">
+            <p class="admin-text text-center">Admin</p>
+            <div class="position-absolute top-50 start-50 translate-middle">
+            </div>
+        </header>
+        <!-- Menu -->
+        <nav class="navbar navbar-expand-lg rounded-5 navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-users.html">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-revision.html">Revision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"  href="admin-register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Form -->
+    <div class="container">
+        <h2 class="mb-4 mt-3">Register a Recipe</h2>
+        <form>
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                      <div class="mb-2">
+                        <label for="name">Name of the Recipe</label>
+                        <input type="text" class="form-control" id="name">
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mb-2">
+                        <label for="file">Image of the Recipe</label>
+                        <input class="form-control" type="file" id="formFile">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container mt-2">
+                <form>
+                  <div class="row">
+                    <div class="col">
+                      <label for="category">Category</label>
+                      <select class="form-select" id="category">
+                        <option selected disabled>Choose a category</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="drinks">Drinks</option>
+                        <option value="entrees">Entrees</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="desserts">Desserts</option>
+                        <option value="soups">Soups</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <label for="occasion">Occasion</label>
+                      <select class="form-select" id="occasion">
+                        <option selected disabled>Choose an occasion</option>
+                        <option value="all">All</option>
+                        <option value="birthday">Birthday</option>
+                        <option value="dad-day">Dad Day</option>
+                        <option value="mom-day">Mom Day</option>
+                        <option value="kids-day">Kids Day</option>
+                        <option value="christmas">Christmas</option>
+                        <option value="holy-week">Holy Week</option>
+                        <option value="summer">Summer</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <label for="complexity">Complexity</label>
+                      <select class="form-select" id="complexity">
+                        <option selected disabled>Choose a complexity level</option>
+                        <option value="easy">Easy</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <label for="servings">Servings</label>
+                      <input type="number" class="form-control" id="servings" placeholder="Enter number of servings">
+                    </div>
+                  </div>
+                </form>
+              </div>
+          <div class="container  mt-3">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="prepTime">Preparation Time</label>
+                    <input type="number" class="form-control" id="prepTime" placeholder="Enter preparation time in minutes">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="cookTime">Cooking Time</label>
+                    <input type="number" class="form-control" id="cookTime" placeholder="Enter cooking time in minutes">
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="totalTime">Total Time</label>
+                    <input type="text" class="form-control" id="totalTime" readonly>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form-group mt-3">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+          </div>
+          <div class="form-group mt-2">
+            <label for="ingredients">Ingredients</label>
+            <textarea class="form-control" id="ingredients" name="ingredients" rows="5"></textarea>
+          </div>
+          <div class="form-group mt-2">
+            <label for="instructions">Instructions</label>
+            <textarea class="form-control" id="instructions" name="instructions" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-dark mt-2">Submit</button>
+        </form>
+      </div>
+    </section>
+        <!-- footer -->
+    <footer class="row bg-dark mt-5">
+            <p class="text-center text-light footer-text mt-3">Kochkunst and its logo are registered trademark.</p>
+            <p class="text-center text-light footer-text">© 2023 Kochkunst.</p>
+    </footer>
+  <!-- BS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <!-- VueJS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <!-- Main JS -->
+    <script src="./js/main.js"></script>
+  <!-- Mounted app -->
+    <script>
+      const mountedApp = app.mount("#app");
+    </script>
+  </body>
+</html>
