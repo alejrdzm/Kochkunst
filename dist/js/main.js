@@ -52,6 +52,12 @@ const app = Vue.createApp({
                 { name: 'Arequipe', status: 'Pending' },
                 { name: 'Bratwurst', status: 'Pending' },
                 { name: 'Rouladen', status: 'Pending' }
+            ],
+            pages: [
+                { url: "index.html", page: "Home" },
+                { url: "profile.html", page: "Profile" },
+                { url: "login.html", page: "Log In" },
+                { url: "register.html", page: "Register"}
             ]
         }
     },
