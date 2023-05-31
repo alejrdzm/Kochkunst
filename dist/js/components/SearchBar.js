@@ -1,4 +1,5 @@
 app.component('search-bar', {
+    //component that search the recipe in the website
     data() {
       return {
         keyword: '',

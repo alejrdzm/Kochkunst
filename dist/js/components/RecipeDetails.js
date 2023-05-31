@@ -1,4 +1,5 @@
 app.component('recipe-details', {
+    //component that pop-up the recipe information
     props: {
         image: {
             type: String

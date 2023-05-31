@@ -1,4 +1,5 @@
 app.component('header-menu', {
+  //component that displays the website menu
   props: {
     page: {
       type: String,

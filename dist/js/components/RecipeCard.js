@@ -1,4 +1,5 @@
 app.component('recipe-card', {
+    //component that shows the recipe overview
     props: {
         image: {
             type: String
