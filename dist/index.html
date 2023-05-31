@@ -19,7 +19,12 @@
   <section id="app" class="container">
 
     <!-- Recipe Details: modal with the recipe information -->
-    <recipe-details :image="recipes[selectedIndex].image" :name="recipes[selectedIndex].name" :prep_time="recipes[selectedIndex].prep_time" :cook_time="recipes[selectedIndex].cook_time" :total_time="recipes[selectedIndex].total_time" :portions="recipes[selectedIndex].portions" :complexity="recipes[selectedIndex].complexity" :ingredients="recipes[selectedIndex].ingredients" :instructions="recipes[selectedIndex].instructions" v-on:prevrecipe="onClickPrevRecipe" v-on:nextrecipe="onClickNextRecipe"></recipe-details>
+    <recipe-details :image="recipes[selectedIndex].image" :name="recipes[selectedIndex].name"
+      :prep_time="recipes[selectedIndex].prep_time" :cook_time="recipes[selectedIndex].cook_time"
+      :total_time="recipes[selectedIndex].total_time" :portions="recipes[selectedIndex].portions"
+      :complexity="recipes[selectedIndex].complexity" :ingredients="recipes[selectedIndex].ingredients"
+      :instructions="recipes[selectedIndex].instructions" v-on:prevrecipe="onClickPrevRecipe"
+      v-on:nextrecipe="onClickNextRecipe"></recipe-details>
 
     <!-- Website Logo: branding and logo -->
     <header class="position-relative">
@@ -40,7 +45,9 @@
       <h2 class="mb-3">Top 10 Recipes</h2>
       <section class="row">
         <div v-for="(item, index) in recipes" class="col-md-3">
-          <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.instructions" :time="item.time" :level="item.level" :likes="item.likes" :index="index" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike" v-on:recipedetails="onClickRecipeDetails"></recipe-card>
+          <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.instructions"
+            :time="item.time" :level="item.level" :likes="item.likes" :index="index" v-on:recipelike="onClickRecipeLike"
+            v-on:recipeunlike="onClickRecipeUnlike" v-on:recipedetails="onClickRecipeDetails"></recipe-card>
         </div>
       </section>
       </div>

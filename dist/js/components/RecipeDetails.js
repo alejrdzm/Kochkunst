@@ -1,5 +1,5 @@
 app.component('recipe-details', {
-    props:{
+    props: {
         image: {
             type: String
         },
@@ -31,11 +31,11 @@ app.component('recipe-details', {
             type: String,
             default: "recipe preparation time"
         },
-        cook_time:{
+        cook_time: {
             type: String,
             default: "recipe cooking time"
         },
-        portions: { 
+        portions: {
             type: String,
             default: "recipe portions"
         },
@@ -60,24 +60,24 @@ app.component('recipe-details', {
         }
     },
 
-    mounted(){
-      this.$test.on('foo', function(data){
-        console.log(data);
-      })
-    }, 
+    mounted() {
+        this.$test.on('foo', function (data) {
+            console.log(data);
+        })
+    },
 
-    methods:{
-        onClickPrev(){
+    methods: {
+        onClickPrev() {
             console.log("PREV");
             this.$emit('prevrecipe', this.index);
         },
-        onClickNext(){
+        onClickNext() {
             console.log("NEXT");
             this.$emit('nextrecipe', this.index);
         }
     },
     template: /*html*/
-    `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">

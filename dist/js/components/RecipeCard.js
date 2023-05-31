@@ -31,11 +31,11 @@ app.component('recipe-card', {
             type: String,
             default: "recipe preparation time"
         },
-        cook_time:{
+        cook_time: {
             type: String,
             default: "recipe cooking time"
         },
-        portions: { 
+        portions: {
             type: String,
             default: "recipe portions"
         },
@@ -60,9 +60,9 @@ app.component('recipe-card', {
         }
     },
     methods: {
-        onClickLike() { //Los metodos personalizados debe crearse en los botones que generarán la acción
+        onClickLike() {
             console.log("LIKE");
-            this.$emit('recipelike', this.index); //De esta manera creamos un metodo personalizado, el cual es generado en el botón correspondiente a este metodo, para posteriormetne ser escuchao por el componente padre el cual ejecutará acciones en base a este metodo eprsonalizado
+            this.$emit('recipelike', this.index);
         },
         onClickUnlike() {
             console.log("UNLIKE");
@@ -71,7 +71,6 @@ app.component('recipe-card', {
         onClickViewRecipe() {
             console.log("VIEW RECIPE");
             this.$emit('recipedetails', this.index);
-            //this.$test.emit('foo', "Works!"); //Llamamos a la variable global y accedemos a el metodo emit que se hereda de el objeto almacenado en la variable (por la librería), funciona como un $emit, de esta forma creamos un metodo personalizado el cual no necesita ser escuchado por el componente padre
         }
     },
     template: /*html*/

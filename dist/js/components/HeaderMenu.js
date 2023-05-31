@@ -11,8 +11,7 @@ app.component('header-menu', {
   methods: {
 
   },
-  template:
-    /*html*/
+  template: /*html*/
     `<nav class="navbar navbar-expand-lg rounded-5 navbar-dark bg-dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
