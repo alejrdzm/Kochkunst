@@ -1,17 +1,17 @@
 app.component('header-menu', {
-    props:{
-        page:{
-            type: String,
-        },
-        url:{
-          type: String,
-        }
+  props: {
+    page: {
+      type: String,
     },
+    url: {
+      type: String,
+    }
+  },
 
-    methods:{
-     
-    },
-    template:
+  methods: {
+
+  },
+  template:
     /*html*/
     `<nav class="navbar navbar-expand-lg rounded-5 navbar-dark bg-dark">
       <div class="container-fluid">

@@ -12,81 +12,30 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="./css/main.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-  <title>Kochkunst | Home</title>
+  <title>Kochkunst</title>
 </head>
 
 <body>
   <section id="app" class="container">
-    <!-- Modal -->
-    <div class="modal fade" id="featuredRecipes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title name-text" id="staticBackdropLabel">{{ featuredRecipes[selectedIndex].name }}</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <img class="img-fluid" v-bind:src="featuredRecipes[selectedIndex].image"
-              alt="{{ featuredRecipes[selectedIndex].name }}">
-            <p class="box-text text-center mt-3">Preparation: {{ featuredRecipes[selectedIndex].prep_time }} - Cooking:
-              {{ featuredRecipes[selectedIndex].cook_time }}</p>
-            <p class="box-text text-center mt-3">Total: {{ featuredRecipes[selectedIndex].total_time }}</p>
-            <p class="box-text text-center">Likes: {{ featuredRecipes[selectedIndex].likes }} - Portions: {{
-              featuredRecipes[selectedIndex].portions }} - {{ featuredRecipes[selectedIndex].complexity }}</p>
-            <p class="content-text">{{ featuredRecipes[selectedIndex].description }}</p>
-            <p class="content-text">{{ featuredRecipes[selectedIndex].ingredients }}</p>
-            <p class="content-text">{{ featuredRecipes[selectedIndex].instructions }}</p>
-            <p class="content-text text-center">Recipes related: {{ featuredRecipes[selectedIndex].recipes_related }}
-            </p>
-          </div>
-          <div class="modal-footer">
-            <div v-if="featuredRecipes.length>1">
-              <button type="button" v-if="hasRecipes" class="btn btn-dark me-3"
-                v-on:click="onClickPrevFeatured()">Prev</button>
-              <button type="button" v-if="hasRecipes" class="btn btn-dark"
-                v-on:click="onClickNextFeatured()">Next</button>
-            </div>
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Header -->
+
+    <!-- Recipe Details: modal with the recipe information -->
+    <recipe-details :image="recipes[selectedIndex].image" :name="recipes[selectedIndex].name" :ingredients="recipes[selectedIndex].ingredients" :instructions="recipes[selectedIndex].instructions" v-on:prevrecipe="onClickPrevRecipe" v-on:nextrecipe="onClickNextRecipe"></recipe-details>
+
+    <!-- Header & Menu: website branding and navegation -->
     <header class="position-relative">
       <img v-bind:src="logo" class="mx-auto d-block mt-2 mb-2" alt="logo">
       <div class="position-absolute top-50 start-50 translate-middle">
       </div>
     </header>
-    <!-- Menu -->
+
+    <!-- Menu Placeholder -->
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li v-for="(pages, index) in pages" class="nav-item">
-          <header-menu :url="pages.url" name="pages.page"></header-menu>
+        <header-menu :url="pages.url" name="pages.page"></header-menu>
       </li>
     </ul>
-    <!-- Categories -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li v-for="(category, index) in categories" class="nav-item me-3">
-              <button class="btn rounded-5 btn-dark" v-on:click="onClickCategory(category.name)"
-                aria-current="page">{{ category.name }}</button>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control rounded-5 me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-dark rounded-5" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    
-    <!-- Featured Recipes -->
+
+    <!-- Featured Section: list of the highlighted recipes -->
     <section class="row mt-5 mb-3">
       <h2 class="mb-3">Top 10 Recipes</h2>
       <section class="row">
@@ -109,20 +58,22 @@
       </section>
     </section>
   </section>
-  <!-- Footer -->
+
+  <!-- Footer and Disclaimer: general website information -->
   <footer class="row bg-dark">
     <p class="text-center text-light footer-text mt-3">Kochkunst and its logo are registered trademark.</p>
     <p class="text-center text-light footer-text">© 2023 Kochkunst.</p>
   </footer>
 
-  <!-- BS JS -->
+  <!-- Boostrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
+
   <!-- VueJS -->
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-  <!--Librería externa de Vue -->
+  <!-- External Vue Library -->
   <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
 
   <!-- Axios API JS -->
@@ -132,16 +83,17 @@
   <script src="./js/main.js"></script>
 
   <!-- Components -->
-      <script src="./js/components/HeaderMenu.js"></script>
-      <script src="./js/components/Footer.js"></script>
-      <script src="./js/components/RecipeCard.js"></script>
-      <script src="./js/components/RecipeDetails.js"></script>
-      <script src="./js/components/Search.js"></script>
+  <script src="./js/components/HeaderMenu.js"></script>
+  <script src="./js/components/PageFooter.js"></script>
+  <script src="./js/components/RecipeCard.js"></script>
+  <script src="./js/components/RecipeDetails.js"></script>
+  <script src="./js/components/SearchBar.js"></script>
 
   <!-- Mounted App -->
   <script>
     const mountedApp = app.mount("#app");
   </script>
+
 </body>
 
 </html>

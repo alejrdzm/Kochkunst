@@ -14,11 +14,11 @@ app.component('recipe-details', {
         }
     },
 
-    mounted(){  //Se crea un mounted
-      this.$test.on('foo', function(data){ //Se llama a la variable global y al metodo on para así poder implementar el metodo personalizado que se creó en el componente recipe card
+    mounted(){
+      this.$test.on('foo', function(data){
         console.log(data);
       })
-    }, //Esta forma de comunicar los objetos nos funciona para comunicar objetos que no necesiten información del componente padre component.js, de esta forma la comunicación se logra entre datos de 2 componentes hijos, una consulta por decirlo así
+    }, 
 
     methods:{
         onClickPrev(){
@@ -30,8 +30,7 @@ app.component('recipe-details', {
             this.$emit('nextrecipe', this.index);
         }
     },
-    template:
-    /*html*/
+    template: /*html*/
     `<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
