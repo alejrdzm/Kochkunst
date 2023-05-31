@@ -1,16 +1,62 @@
 app.component('recipe-details', {
     props:{
-        name:{
-            type:String
+        image: {
+            type: String
         },
-        image:{
-            type:String
+        category: {
+            type: String,
+            default: "recipe category"
         },
-        ingredients:{
-            type:String
+        name: {
+            type: String,
+            default: "recipe name"
         },
-        instructions:{
-            type:String
+        description: {
+            type: String,
+            default: "recipe description"
+        },
+        ingredients: {
+            type: String,
+            default: "recipe ingredients"
+        },
+        instructions: {
+            type: String,
+            default: "recipe instructions"
+        },
+        total_time: {
+            type: String,
+            default: "recipe time"
+        },
+        prep_time: {
+            type: String,
+            default: "recipe preparation time"
+        },
+        cook_time:{
+            type: String,
+            default: "recipe cooking time"
+        },
+        portions: { 
+            type: String,
+            default: "recipe portions"
+        },
+        occasion: {
+            type: String,
+            default: "recipe occasion"
+        },
+        level: {
+            type: String,
+            default: "recipe level"
+        },
+        likes: {
+            type: Number,
+            default: 10
+        },
+        recipes_related: {
+            type: String,
+            default: "recipes related"
+        },
+        index: {
+            type: String
         }
     },
 
@@ -40,8 +86,14 @@ app.component('recipe-details', {
         </div>
         <div class="modal-body">
           <img class="d-block m-auto img-fluid" v-bind:src="image" alt="{{ name }}">
-          <p class="text-center fs-6">{{ ingredients }}</p>
-          <p class="fst-italic fw-light fs-5">{{ instructions }}</p>
+          <p class="box-text text-center mt-3">Preparation: {{ prep_time }} - Cooking: {{ cook_time }}</p>
+            <p class="box-text text-center mt-3">Total: {{ total_time }}</p>
+            <p class="box-text text-center">Likes: {{ likes }} - Portions: {{ portions }} - {{ complexity }}</p>
+            <p class="content-text">{{ description }}</p>
+            <p class="content-text">{{ ingredients }}</p>
+            <p class="content-text">{{ instructions }}</p>
+            <p class="content-text text-center">Recipes related: {{ recipes_related }}
+            </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-dark" v-on:click="onClickPrev()">Prev</button>

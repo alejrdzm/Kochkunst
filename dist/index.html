@@ -21,14 +21,14 @@
     <!-- Recipe Details: modal with the recipe information -->
     <recipe-details :image="recipes[selectedIndex].image" :name="recipes[selectedIndex].name" :ingredients="recipes[selectedIndex].ingredients" :instructions="recipes[selectedIndex].instructions" v-on:prevrecipe="onClickPrevRecipe" v-on:nextrecipe="onClickNextRecipe"></recipe-details>
 
-    <!-- Header & Menu: website branding and navegation -->
+    <!-- Website Logo: branding and logo -->
     <header class="position-relative">
       <img v-bind:src="logo" class="mx-auto d-block mt-2 mb-2" alt="logo">
       <div class="position-absolute top-50 start-50 translate-middle">
       </div>
     </header>
 
-    <!-- Menu Placeholder -->
+    <!-- Header Menu: navigation through pages -->
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li v-for="(pages, index) in pages" class="nav-item">
         <header-menu :url="pages.url" name="pages.page"></header-menu>
@@ -39,24 +39,13 @@
     <section class="row mt-5 mb-3">
       <h2 class="mb-3">Top 10 Recipes</h2>
       <section class="row">
-        <div v-if="hasRecipes" v-for="(featuredRecipes, index) in featuredRecipes" class="col-md-3 p-2">
-          <div class="card p-2">
-            <img class="card-img-top rounded" v-bind:src="featuredRecipes.image" alt="featured recipe">
-            <div class="card-body">
-              <p class="category-text">{{ featuredRecipes.category }}</p>
-              <h5 class="card-title name-text">{{ featuredRecipes.name }}</h5>
-              <p class="card-text time-text">{{ featuredRecipes.time }}</p>
-              <p class="card-text level-text">{{ featuredRecipes.complexity }}</p>
-              <p class="card-text likes-text">{{ featuredRecipes.likes }}</p>
-              <button class="btn btn-success me-3" v-on:click="onClickLike(index)">Like</button>
-              <button class="btn btn-danger me-3" v-on:click="onClickUnlike(index)">Unlike</button>
-              <button class="btn btn-dark me-3 mt-2" data-bs-toggle="modal" data-bs-target="#featuredRecipes"
-                v-on:click="onClickViewRecipe(index)">View Recipe</button>
-            </div>
-          </div>
+        <div v-for="(item, index) in recipes" class="col-md-3">
+          <recipe-card :image="item.image" :category="item.category" :name="item.name" :description="item.instructions" :time="item.time" :level="item.level" :likes="item.likes" :index="index" v-on:recipelike="onClickRecipeLike" v-on:recipeunlike="onClickRecipeUnlike" v-on:recipedetails="onClickRecipeDetails"></recipe-card>
         </div>
       </section>
+      </div>
     </section>
+  </section>
   </section>
 
   <!-- Footer and Disclaimer: general website information -->

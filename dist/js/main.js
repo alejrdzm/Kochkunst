@@ -23,6 +23,13 @@ const app = Vue.createApp({
                 { name: 'Arequipe', status: 'Pending' },
                 { name: 'Bratwurst', status: 'Pending' },
                 { name: 'Rouladen', status: 'Pending' }
+            ],
+            //website pages
+            pages: [
+                { url: "index.html", page: "Home" },
+                { url: "profile.html", page: "Profile" },
+                { url: "login.html", page: "Log In" },
+                { url: "register.html", page: "Register"}
             ]
         }
     },
@@ -58,12 +65,12 @@ const app = Vue.createApp({
                         id: element.idMeal,
                         image: element.strMealThumb,
                         name: element.strMeal,
-                        category: "Beef",
-                        time: "20 mins",
-                        level: "Easy",
+                        category: "Placeholder",
+                        time: "Placeholder",
+                        level: "Placeholder",
                         likes: 18,
-                        ingredients: "NA",
-                        instructions: "NA"
+                        ingredients: "Placeholder",
+                        instructions: "Placeholder"
                     });
                 });
             }
